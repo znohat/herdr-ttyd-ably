@@ -60,3 +60,20 @@ details when a pane enters a selected status.
 any exact status string. Repeated reports are suppressed; `idle` notifies only
 after a `working` → `idle` transition. Set the array to `[]` to disable
 notifications.
+
+## Remote machines
+
+Plugins are installed per machine, not shared through `herdr machine`. For each
+saved machine you want notifications from, repeat the [Install](#install) and
+[Configure](#configure) steps on that machine, including the publisher key in
+its plugin config directory. `node` must also be in that machine's `PATH`.
+
+## Troubleshoot
+
+List the plugin's recent command logs:
+
+```sh
+herdr plugin log list --plugin herdr-ttyd-ably
+```
+
+You can also ask your AI agent to read the logs and help diagnose the problem.

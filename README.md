@@ -22,8 +22,9 @@ don't send duplicate messages.
 [Ably](https://ably.com/) is a hosted realtime messaging service. The plugin publishes status
 messages to an Ably channel, and the custom ttyd browser integration subscribes
 to that channel to receive them. Create two API keys in the same Ably app,
-restricted to the exact same channel (the default example is
-`herdr-agent-completed`):
+restricted to the same channel, `YOUR_NOTIFICATION_CHANNEL`. Ably creates the
+channel on demand when ttyd subscribes, so you don't need to create it in
+advance.
 
 - A publisher key with `publish` permission only.
 - A browser key with `subscribe` permission only.
@@ -42,7 +43,7 @@ PLUGIN_CONFIG_DIR="$(herdr plugin config-dir ttyd.ably-notifications)"
 cat > "$PLUGIN_CONFIG_DIR/config.json" <<'EOF'
 {
   "ably_api_key": "APP_ID.KEY_ID:PUBLISH_ONLY_SECRET",
-  "channel": "herdr-agent-completed",
+  "channel": "YOUR_NOTIFICATION_CHANNEL",
   "notification_statuses": ["idle", "done", "blocked"]
 }
 EOF

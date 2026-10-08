@@ -1,5 +1,5 @@
 {
   "ably_api_key": "APP_ID.KEY_ID:PUBLISH_ONLY_SECRET",
-  "channel": "herdr-agent-completed",
+  "channel": "YOUR_NOTIFICATION_CHANNEL",
   "notification_statuses": ["idle", "done", "blocked"]
 }

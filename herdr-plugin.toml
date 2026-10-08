@@ -2,7 +2,7 @@ id = "ttyd.ably-notifications"
 name = "ttyd Ably Notifications"
 version = "0.1.0"
 min_herdr_version = "0.7.0"
-description = "Publish Herdr agent status notifications to Ably for ttyd browsers"
+description = "Send desktop notification when herdr agent status changed. Designed to work with ttyd."
 
 [[events]]
 on = "pane.agent_status_changed"

@@ -19,7 +19,7 @@ don't send duplicate messages.
 
 ## Configure
 
-Ably is a hosted realtime messaging service. The plugin publishes status
+[Ably](https://ably.com/) is a hosted realtime messaging service. The plugin publishes status
 messages to an Ably channel, and the custom ttyd browser integration subscribes
 to that channel to receive them. Create two API keys in the same Ably app,
 restricted to the exact same channel (the default example is

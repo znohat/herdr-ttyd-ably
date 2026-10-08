@@ -1,7 +1,9 @@
 # herdr-ttyd-ably
 
-Publish Herdr agent status notifications to Ably. The matching ttyd browser
-integration subscribes to the channel and displays desktop notifications.
+Publish Herdr agent status notifications to Ably. This plugin is designed to
+work with [znohat's custom ttyd build](https://github.com/znohat/ttyd), whose
+browser integration subscribes to the channel and displays desktop
+notifications.
 
 ## Install
 
@@ -17,17 +19,20 @@ don't send duplicate messages.
 
 ## Configure
 
-Create two API keys in the same Ably app, restricted to the exact same channel
-(the default example is `herdr-agent-completed`):
+Ably is a hosted realtime messaging service. The plugin publishes status
+messages to an Ably channel, and the custom ttyd browser integration subscribes
+to that channel to receive them. Create two API keys in the same Ably app,
+restricted to the exact same channel (the default example is
+`herdr-agent-completed`):
 
 - A publisher key with `publish` permission only.
 - A browser key with `subscribe` permission only.
 
-Keep the publisher key in the Herdr plugin config directory. The browser key
-is compiled into the ttyd frontend and is visible to anyone who can load that
-page; never use the publisher key or a wildcard-capability key in the browser.
-Basic Auth limits page access but does not conceal browser code from
-authenticated users.
+Keep the publisher key in the Herdr plugin config directory. ttyd sends the
+browser key to clients through its notification configuration endpoint, where
+it is visible to users who can access the page. Never use the publisher key or
+a wildcard-capability key in the browser. Basic Auth limits page access but
+does not conceal the key from authenticated users.
 
 Configure the plugin:
 

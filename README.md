@@ -5,6 +5,8 @@ work with [znohat's custom ttyd build](https://github.com/znohat/ttyd), whose
 browser integration subscribes to the channel and displays desktop
 notifications.
 
+![screenshot](https://raw.githubusercontent.com/znohat/herdr-ttyd-ably/main/herdr-ttyd-ably-preview.gif)
+
 ## Install
 
 ```sh

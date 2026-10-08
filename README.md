@@ -13,7 +13,7 @@ notifications.
 herdr plugin install znohat/herdr-ttyd-ably
 ```
 
-The plugin runs with Node.js and uses only Node's built-in modules. Its event
+The plugin runs with Node.js (require `node` in PATH) and uses only Node's built-in modules. Its event
 hook watches `pane.agent_status_changed` and publishes when a pane enters a
 status selected by `notification_statuses`. Per-pane status is stored in
 Herdr's plugin state directory so repeated status or presentation updates

@@ -38,8 +38,8 @@ does not conceal the key from authenticated users.
 Configure the plugin:
 
 ```sh
-herdr plugin enable ttyd.ably-notifications
-PLUGIN_CONFIG_DIR="$(herdr plugin config-dir ttyd.ably-notifications)"
+herdr plugin enable herdr-ttyd-ably
+PLUGIN_CONFIG_DIR="$(herdr plugin config-dir herdr-ttyd-ably)"
 cat > "$PLUGIN_CONFIG_DIR/config.json" <<'EOF'
 {
   "ably_api_key": "APP_ID.KEY_ID:PUBLISH_ONLY_SECRET",

@@ -1,5 +1,5 @@
-id = "ttyd.ably-notifications"
-name = "ttyd Ably Notifications"
+id = "herdr-ttyd-ably"
+name = "herdr-ttyd-ably"
 version = "0.1.0"
 min_herdr_version = "0.7.0"
 description = "Send desktop notification when herdr agent status changed. Designed to work with ttyd."
